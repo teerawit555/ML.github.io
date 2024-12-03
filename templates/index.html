@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+    <!-- เชื่อมโยงกับไฟล์ CSS ในโฟลเดอร์ static -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Face Recognition System by "TT"</h1>
+        <button onclick="collectFaces()">Collect Faces</button>
+        <button onclick="trainModel()">Train Model</button>
+        <button onclick="loginFace()">Login with Face</button>
+
+        <!-- แสดงข้อความสถานะ -->
+        <div id="status-message" style="margin-top: 20px;"></div>
+    </div>
+    
+    <!-- เชื่อมโยงกับไฟล์ JavaScript ในโฟลเดอร์ static -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
