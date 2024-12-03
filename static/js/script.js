@@ -1,12 +1,20 @@
 // ฟังก์ชันสำหรับการเก็บข้อมูลใบหน้า
 function collectFaces() {
+    const userId = document.getElementById('user_id').value;  // ดึงค่าจากฟอร์มกรอก user_id
+
+    // ตรวจสอบว่า user_id ถูกกรอกหรือยัง
+    if (!userId) {
+        alert("Please enter a user ID.");
+        return;
+    }
+
     fetch('/collect_faces', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            user_id: '123',  // ส่ง user_id ไป
+            user_id: userId,  // ส่ง user_id ไป
         })
     })
     .then(response => response.json())

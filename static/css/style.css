@@ -26,3 +26,41 @@ button:hover {
     background-color: #45a049;
 }
 
+/* ตกแต่ง label */
+label[for="user_id"] {
+    font-size: 18px;            /* ขนาดฟอนต์ */
+    color: #333;                /* สีตัวอักษร */
+    font-weight: bold;          /* ตัวหนา */
+    margin-bottom: 10px;        /* ระยะห่างจาก input */
+    display: block;             /* ทำให้ label เป็นบล็อกเพื่อจัดตำแหน่ง */
+    text-align: center;      
+    font-family: 'Arial', sans-serif;
+}
+
+/* Input field */
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Status message */
+#status-message {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Success message */
+#status-message.green {
+    color: green;
+}
+
+/* Error message */
+#status-message.red {
+    color: red;
+}
